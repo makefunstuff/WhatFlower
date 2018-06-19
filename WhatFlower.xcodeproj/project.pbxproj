@@ -13,9 +13,12 @@
 		543B431C20D9932C000D822E /* WhatFlower.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 543B431A20D9932C000D822E /* WhatFlower.xcdatamodeld */; };
 		543B431E20D9932D000D822E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543B431D20D9932D000D822E /* Assets.xcassets */; };
 		543B432120D9932D000D822E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543B431F20D9932D000D822E /* LaunchScreen.storyboard */; };
+		543B432920D99345000D822E /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 543B432820D99345000D822E /* FlowerClassifier.mlmodel */; };
+		ADB4201EAF41F449C8EE9B16 /* Pods_WhatFlower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A49033C083D1302C0E9132E /* Pods_WhatFlower.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542A8028D8AB22024152CC0F /* Pods-WhatFlower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlower.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatFlower/Pods-WhatFlower.release.xcconfig"; sourceTree = "<group>"; };
 		543B431020D9932C000D822E /* WhatFlower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatFlower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543B431320D9932C000D822E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543B431520D9932C000D822E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		543B431D20D9932D000D822E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		543B432020D9932D000D822E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		543B432220D9932D000D822E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		543B432820D99345000D822E /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = FlowerClassifier.mlmodel; path = ../../Classify/FlowerClassifier.mlmodel; sourceTree = "<group>"; };
+		5A49033C083D1302C0E9132E /* Pods_WhatFlower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatFlower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		818174EA00E183C244FD4F55 /* Pods-WhatFlower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatFlower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatFlower/Pods-WhatFlower.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB4201EAF41F449C8EE9B16 /* Pods_WhatFlower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CD64F7A42FA81A650245452 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				818174EA00E183C244FD4F55 /* Pods-WhatFlower.debug.xcconfig */,
+				542A8028D8AB22024152CC0F /* Pods-WhatFlower.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		543B430720D9932C000D822E = {
 			isa = PBXGroup;
 			children = (
 				543B431220D9932C000D822E /* WhatFlower */,
 				543B431120D9932C000D822E /* Products */,
+				1CD64F7A42FA81A650245452 /* Pods */,
+				6DAAF0EFD6F8BEE4BA7E372D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +81,17 @@
 				543B431F20D9932D000D822E /* LaunchScreen.storyboard */,
 				543B432220D9932D000D822E /* Info.plist */,
 				543B431A20D9932C000D822E /* WhatFlower.xcdatamodeld */,
+				543B432820D99345000D822E /* FlowerClassifier.mlmodel */,
 			);
 			path = WhatFlower;
+			sourceTree = "<group>";
+		};
+		6DAAF0EFD6F8BEE4BA7E372D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A49033C083D1302C0E9132E /* Pods_WhatFlower.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 543B432520D9932D000D822E /* Build configuration list for PBXNativeTarget "WhatFlower" */;
 			buildPhases = (
+				8C6CFBC630939846821BE21D /* [CP] Check Pods Manifest.lock */,
 				543B430C20D9932C000D822E /* Sources */,
 				543B430D20D9932C000D822E /* Frameworks */,
 				543B430E20D9932C000D822E /* Resources */,
+				1065227823B28FE6F8C55AA4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +162,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1065227823B28FE6F8C55AA4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhatFlower/Pods-WhatFlower-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatFlower/Pods-WhatFlower-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6CFBC630939846821BE21D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhatFlower-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		543B430C20D9932C000D822E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543B432920D99345000D822E /* FlowerClassifier.mlmodel in Sources */,
 				543B431620D9932C000D822E /* ViewController.swift in Sources */,
 				543B431420D9932C000D822E /* AppDelegate.swift in Sources */,
 				543B431C20D9932C000D822E /* WhatFlower.xcdatamodeld in Sources */,
@@ -282,6 +353,7 @@
 		};
 		543B432620D9932D000D822E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 818174EA00E183C244FD4F55 /* Pods-WhatFlower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +372,7 @@
 		};
 		543B432720D9932D000D822E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 542A8028D8AB22024152CC0F /* Pods-WhatFlower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
